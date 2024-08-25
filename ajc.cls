@@ -4,7 +4,7 @@
 % Author and Maintainer: Alexander Jacob (alexjacob@duck.com)
 
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{ajc2-0}[by Alexander Jacob]
+\ProvidesClass{ajc}[by Alexander Jacob]
 
 % Layout and so on
 \LoadClass[a4paper,twoside,12pt]{article}
