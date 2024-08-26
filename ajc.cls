@@ -35,7 +35,7 @@
 
 \titleformat{\section}
 	{\sffamily\Large}
-	{\makebox[20mm][r]{\textcolor{cyan}{\bfseries\Huge\thesection\textcolor{gray}{\,$|$}}}\MakeUppercase{#1}}{0pt}{}[]
+	{\makebox[20mm][r]{\textcolor{cyan}{\bfseries\Huge\thesection\textcolor{gray}{\,$|$\,}}}\MakeUppercase{#1}}{0pt}{}[]
 \titlespacing*{\section}
 	{-20mm}{1em}{2em}
 \assignpagestyle{\section}{sectionstyle}
