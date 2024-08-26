@@ -8,7 +8,7 @@
 
 % Layout and so on
 \LoadClass[a4paper,twoside,12pt]{article}
-\RequirePackage[inner=3cm,outer=6cm,top=3cm,bottom=5cm,headheight=18pt]{geometry}
+\RequirePackage[inner=3cm,outer=6cm,top=3cm,bottom=5cm,headheight=18pt,showframe]{geometry}
 \RequirePackage{fancyhdr}
 \RequirePackage[explicit]{titlesec}
 \RequirePackage{soul}
@@ -34,19 +34,22 @@
 \newcommand{\sectionbreak}{\clearpage}
 
 \titleformat{\section}
-	{\sffamily\Large}{\textcolor{cyan}{\bfseries\Huge\selectfont\thesection\textcolor{gray}{\,$|$}}\quad \MakeUppercase{#1}}{.5em}{}[]
+	{\sffamily\Large}
+	{\framebox[20mm][r]{\textcolor{cyan}{\bfseries\Huge\thesection\textcolor{gray}{\,$|$}}}\MakeUppercase{#1}}{0pt}{}[]
 \titlespacing*{\section}
-	{0pt}{1em}{2em}
+	{-20mm}{1em}{2em}
 \assignpagestyle{\section}{sectionstyle}
 \titleclass{\section}{top}
 
 \titleformat{\subsection}
-	{\sffamily\large}{\thesubsection\,\quad \MakeUppercase{#1}}{.5em}{}[]
+	{\sffamily\large}
+	{\thesubsection\,\quad \MakeUppercase{#1}}{.5em}{}[]
 \titlespacing*{\subsection}
 	{0pt}{1em}{0em}
 
 \titleformat{\subsubsection}
-	{\sffamily}{\thesubsubsection\,\quad \MakeUppercase{#1}}{.5em}{}[]
+	{\sffamily}
+	{\thesubsubsection\,\quad \MakeUppercase{#1}}{.5em}{}[]
 \titlespacing*{\subsubsection}
 	{0pt}{1.5em}{0em}
 
