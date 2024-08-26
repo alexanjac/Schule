@@ -13,6 +13,7 @@
 \RequirePackage[explicit]{titlesec}
 \RequirePackage{soul}
 \RequirePackage{chngcntr}
+\RequirePackage[justification=centering,font=small,labelfont=bf]{caption}
 
 \renewcommand{\sectionmark}[1]{\markboth{\MakeUppercase{#1}}{}}
 
