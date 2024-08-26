@@ -8,7 +8,7 @@
 
 % Layout and so on
 \LoadClass[a4paper,twoside,12pt]{article}
-\RequirePackage[inner=3cm,outer=6cm,top=3cm,bottom=5cm,headheight=18pt,showframe]{geometry}
+\RequirePackage[inner=3cm,outer=6cm,top=3cm,bottom=5cm,headheight=18pt]{geometry}
 \RequirePackage{fancyhdr}
 \RequirePackage[explicit]{titlesec}
 \RequirePackage{soul}
@@ -35,7 +35,7 @@
 
 \titleformat{\section}
 	{\sffamily\Large}
-	{\framebox[20mm][r]{\textcolor{cyan}{\bfseries\Huge\thesection\textcolor{gray}{\,$|$}}}\MakeUppercase{#1}}{0pt}{}[]
+	{\makebox[20mm][r]{\textcolor{cyan}{\bfseries\Huge\thesection\textcolor{gray}{\,$|$}}}\MakeUppercase{#1}}{0pt}{}[]
 \titlespacing*{\section}
 	{-20mm}{1em}{2em}
 \assignpagestyle{\section}{sectionstyle}
