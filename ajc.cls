@@ -14,6 +14,13 @@
 \RequirePackage{soul}
 \RequirePackage{chngcntr}
 \RequirePackage[justification=centering,font=small,labelfont=bf]{caption}
+\RequirePackage{afterpage}
+
+\newcommand\blankpage{%
+	\null
+	\thispagestyle{empty}%
+	\addtocounter{page}{-1}%
+	\newpage}
 
 \renewcommand{\sectionmark}[1]{\markboth{\MakeUppercase{#1}}{}}
 
@@ -73,11 +80,13 @@
 		\vfill
 		{\large \@date \par}
 	\end{titlepage}
+	\afterpage{\blankpage}
 	\pagenumbering{roman}
 	\restoregeometry 
 	\pagestyle{standardstyle}
 	\tableofcontents
 	\clearpage
+	\afterpage{\blankpage}
 	\pagenumbering{arabic}}
 
 % PDF-details
