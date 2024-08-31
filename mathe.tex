@@ -1,4 +1,7 @@
 \documentclass{ajc}
+\usepackage[output-decimal-marker={,},per-mode=fraction,fraction-function=\tfrac]{siunitx}
+\mathcode`,="002C
+\numberwithin{equation}{subsection}
 
 \title{Mathe}
 \author{Alexander Jacob}
@@ -6,4 +9,151 @@
 
 \begin{document}
 	\section{Vektoren}
+	
+	\subsection{Spurpunkte berechnen}
+	\paragraph{a)} Bestimmen Sie die Spurpunkte der Geraden
+	\begin{equation}
+		\mathbf{g}: \overrightarrow{x}=\left(\begin{array}{r} 2 \\ 1 \\ 7\end{array}\right) + \lambda \cdot \left(\begin{array}{r} 0 \\ 6 \\ 4\end{array}\right) \text{\quad und \quad} \mathbf{h}: \overrightarrow{x}=\left(\begin{array}{r} -3 \\ 0 \\ -5\end{array}\right) + \mu \cdot \left(\begin{array}{r} 1 \\ 3 \\ 2\end{array}\right). 
+	\end{equation}
+	
+	\subparagraph{zu g:}
+	\begin{equation}
+		\overrightarrow{x}=\left(\begin{array}{r} 2 \\ 1 + 6\lambda \\ 7 + 4\lambda \end{array}\right)
+	\end{equation}
+	
+	Bedingung für Spurpunkt mit $x_1\text{-}x_2$-Ebene:\quad $x_3 = 0$
+	
+	Punkt von g in der $x_1\text{-}x_2$-Ebene:\quad $x_3 = 0 \Leftrightarrow 0 = 7 + 4\lambda \Leftrightarrow \lambda = -\frac{7}{4}$
+	
+	Ortsvektor des Spurpunkts: 
+	\begin{equation}
+	\overrightarrow{s_\text{12}}=\left(\begin{array}{r} 2 \\ -9,5 \\ 0\end{array}\right)
+	\end{equation}
+	Spurpunkt: $S_\text{12}(2|-9,5|0)$
+	
+	Bedingung für Spurpunkt mit $x_1\text{-}x_3$-Ebene:\quad $x_2 = 0$
+	
+	Punkt von g in der $x_1\text{-}x_3$-Ebene:\quad $x_2 = 0 \Leftrightarrow 0 = 1 + 6\lambda \Leftrightarrow \lambda = -\frac{1}{6}$
+	
+	Ortsvektor des Spurpunkts: 
+	\begin{equation}
+		\overrightarrow{s_\text{13}}=\left(\begin{array}{r} 2 \\ 0 \\ 6,\overline{3}\end{array}\right)
+	\end{equation}
+	Spurpunkt: $S_\text{12}(2|0|6,\overline{3})$
+	
+	Bedingung für Spurpunkt mit $x_2$-$x_3$-Ebene:\quad $x_1 = 0$
+	
+	Punkt von g in der $x_2\text{-}x_3$-Ebene:\quad $x_1 = 0 \Leftrightarrow 0 \ne 2 \,\lightning$
+	
+	Es gibt keinen Spurpunkt von $g$ in der $x_2\text{-}x_3$-Ebene.
+	
+	\subparagraph{zu h:}
+	\begin{equation}
+		\overrightarrow{x}=\left(\begin{array}{r} -3 + \mu \\ 3\mu \\ -5 + 2\mu\end{array}\right)
+	\end{equation}
+	
+	Bedingung für Spurpunkt mit $x_1\text{-}x_2$-Ebene:\quad $x_3 = 0$
+	
+	Punkt von h in der $x_1\text{-}x_2$-Ebene:\quad $x_3 = 0 \Leftrightarrow 0 = -5 + 2\mu \Leftrightarrow \mu = \frac{5}{2}$
+	
+	Ortsvektor des Spurpunkts: 
+	\begin{equation}
+		\overrightarrow{s_\text{12}}=\left(\begin{array}{r} -0,5 \\ 7,5 \\ 0\end{array}\right)
+	\end{equation}
+	Spurpunkt: $S_\text{12}(-0,5|7,5|0)$
+	
+	Bedingung für Spurpunkt mit $x_1\text{-}x_3$-Ebene:\quad $x_2 = 0$
+	
+	Punkt von h in der $x_1\text{-}x_3$-Ebene:\quad $x_2 = 0 \Leftrightarrow 0 = 3\mu \Leftrightarrow \mu = 0$
+	
+	Ortsvektor des Spurpunkts: 
+	\begin{equation}
+		\overrightarrow{s_\text{13}}=\left(\begin{array}{r} -3 \\ 0 \\ -5\end{array}\right)
+	\end{equation}
+	Spurpunkt: $S_\text{12}(-3|0|-5)$
+	
+	Bedingung für Spurpunkt mit $x_2$-$x_3$-Ebene:\quad $x_1 = 0$
+	
+	Punkt von h in der $x_2\text{-}x_3$-Ebene:\quad $x_1 = 0 \Leftrightarrow 0 = -3 + \mu \Leftrightarrow \mu = 3$
+	
+	Ortsvektor des Spurpunkts: 
+	\begin{equation}
+		\overrightarrow{s_\text{23}}=\left(\begin{array}{r} 0 \\ 9 \\ 1\end{array}\right)
+	\end{equation}
+	Spurpunkt: $S_\text{23}(0|9|1)$
+	
+	
+	\paragraph{b)} Von einer Geraden sind die Spurpunkte $S_\text{12} (2|3|0)$ und \linebreak $S_\text{23} (0|-1|1)$ bekannt. Bestimmen Sie den Spurpunkt $S_\text{13}$.
+	
+	Zweipunktegleichung einer Geraden:
+	\begin{equation}\label{eq:1.1zpg}
+		\mathbf{g}: \overrightarrow{x}= \vec{a} + \lambda \cdot \left(\overrightarrow{b} - \overrightarrow{a}\right)
+	\end{equation}
+	
+	Mit den eingesetzten Punkten $S_\text{12}$ und $S_\text{23}$ in \ref{eq:1.1zpg} ergibt sich:
+	\begin{equation}\label{eq:1.1zpg_ein}
+		\mathbf{g}: \overrightarrow{x}= \left(\begin{array}{r} 2 \\ 3 \\ 0\end{array}\right) + \lambda \cdot \left(\begin{array}{r} -2 \\ -4 \\ 1\end{array}\right) = \left(\begin{array}{r} 2 - 2\lambda \\ 3 - 4\lambda \\ \lambda\end{array}\right)
+	\end{equation}
+	
+	Bedingung für Spurpunkt mit $x_1\text{-}x_3$-Ebene:\quad $x_2 = 0$
+	
+	Punkt von g in der $x_1\text{-}x_3$-Ebene:\quad $x_2 = 0 \Leftrightarrow 0 = 3 - 4\lambda \Leftrightarrow \lambda = \frac{3}{4}$
+	
+	Ortsvektor des Spurpunkts: 
+	\begin{equation}
+		\overrightarrow{s_\text{13}}=\left(\begin{array}{r} 0,5 \\ 0 \\ 0,75\end{array}\right)
+	\end{equation}
+	Spurpunkt: $S_\text{12}(0,5|0|0,75)$
+	
+	\subsection{Schatten einer Plakatwand}
+	Vor einem Haus steht eine Plakatwand, die \SI{3}{\m} breit und \SI{6}{m} hoch ist. Ein Punkt der Wand ist $A(6|2|6)$. Auf die Plakatwand fällt paralleles Sonnenlicht. Die Richtung der Sonnenstrahlen ist gegeben durch den Vektor
+	\begin{equation*}
+		\overrightarrow{u}=\left(\begin{array}{r} -3 \\ 1 \\ -1\end{array}\right).
+	\end{equation*}
+	Bestimmen und beschreiben Sie den Verlauf des Schattens an der Hauswand und auf dem Boden.
+	
+	\begin{figure}[ht]
+		\centering
+		\includegraphics[width=0.5\textwidth]{ma_001_schatten.pdf}
+		\caption{Skizze der Plakatwand mit Hauswand.}
+		\label{fig:001_schatten}
+	\end{figure}
+	
+	Geraden in Richtung des Sonneneinfalls:
+	\begin{equation}
+		\mathbf{g}: \overrightarrow{x}=\left(\begin{array}{r} 6 \\ 2 \\ 6\end{array}\right) + \lambda \cdot \left(\begin{array}{r} -3 \\ 1 \\ -1\end{array}\right) = \left(\begin{array}{r} 6 - 3 \lambda \\ 2 + \lambda \\ 6 - \lambda\end{array}\right)
+	\end{equation}
+	\begin{equation}
+		\mathbf{h}: \overrightarrow{x}=\left(\begin{array}{r} 6 \\ 5 \\ 6\end{array}\right) + \mu \cdot \left(\begin{array}{r} -3 \\ 1 \\ -1\end{array}\right) = \left(\begin{array}{r} 6 - 3 \mu \\ 5 + \mu \\ 6 - \mu\end{array}\right)
+	\end{equation}
+	
+	Gesucht sind jeweils die Spurpunkte von $g$ und $h$ mit der $x_2\text{-}x_3$-Ebene (= Hauswand).
+	
+	Bedingung für Spurpunkt mit $x_2$-$x_3$-Ebene:\quad $x_1 = 0$
+	
+	\paragraph{Für g gilt:} 
+	
+	Punkt von h in der $x_2\text{-}x_3$-Ebene:\quad $x_1 = 0 \Leftrightarrow 0 = 6 + -3 \lambda \Leftrightarrow \lambda = 2$
+	
+	Ortsvektor des Spurpunkts: 
+	\begin{equation}
+		\overrightarrow{s_\text{A23}}=\left(\begin{array}{r} 0 \\ 4 \\ 4\end{array}\right)
+	\end{equation}
+	Spurpunkt: $S_\text{23}(0|4|4)$
+	
+	\paragraph{Für h gilt:} 
+	
+	Punkt von h in der $x_2\text{-}x_3$-Ebene:\quad $x_1 = 0 \Leftrightarrow 0 = 6 + -3 \mu \Leftrightarrow \mu = 2$
+	
+	Ortsvektor des Spurpunkts: 
+	\begin{equation}
+		\overrightarrow{s_\text{B23}}=\left(\begin{array}{r} 0 \\ 7 \\ 4\end{array}\right)
+	\end{equation}
+	Spurpunkt: $S_\text{B23}(0|7|4)$
+	
+	Der Schatten der Plakatwand fällt also zum Teil auf die Hauswand bis auf eine Höhe von \SI{4}{\meter} mit einer Breite von \SI{3}{\meter}. Der andere Teil des Schattens fällt demnach auf den Boden vor der Hauswand zwischen den Punkten $A_0$, $B_0$, $S_{A0}$ und $S_{B0}$. Für diese Punkte gilt, dass sie senkrecht unter den Punkten $A$, $B$, $S_\text{A23}$ und $S_\text{B23}$ auf der $x_1\text{-}x_2$-Ebene liegen. Es gilt: $A_0 = (6|2|0)$, $B_0 = (6|5|0)$, $S_{A0} = (0|4|0)$ und $S_{B0} = (0|7|0)$.
+	
+	\subsection{Lageuntersuchung von Geraden}
+	Untersuchen Sie die Geraden $g$ und $h$ auf ihre gegenseitige Lage. Berechnen Sie gegebenenfalls den Schnittpunkt.
+	
 \end{document}
