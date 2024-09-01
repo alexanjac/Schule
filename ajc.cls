@@ -80,7 +80,6 @@
 		\vfill
 		{\large \@date \par}
 	\end{titlepage}
-	\afterpage{\blankpage}
 	\pagenumbering{roman}
 	\restoregeometry 
 	\pagestyle{standardstyle}
