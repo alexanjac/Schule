@@ -107,6 +107,32 @@
 	\end{equation}
 	Spurpunkt: $S_\text{12}(0,5|0|0,75)$
 	
+	\subsection{Pyramide}
+	Gegeben ist eine gerade Pyramide mit quadratischer Grundfläche. Die Seitenlänge des in der $x_1$-$x_2$-Ebene liegenden Quadrates ABCD beträgt 80 m, die Pyramide hat eine Höhe von 60 m.
+	
+	Die Richtung der einfallenden Sonnenstrahlen ist gegeben durch den Vektor $\overrightarrow{u}=\left(\begin{array}{r} 2 \\ 4 \\ -3\end{array}\right)$.
+	
+	Der Schattenpunkt $S'$ der Pyramidenspitze $S$ liegt in der $x_1$-$x_2$-Ebene.
+	Berechnen Sie die Koordinaten von $S'$.
+	
+	\begin{figure}[ht]
+		\centering
+		\includegraphics[width=0.5\textwidth]{ma_002_pyramide.pdf}
+		\caption{Skizze der Pyramide.}
+		\label{fig:002_pyramide}
+	\end{figure}
+
+	Vektor der auf Punkt $S$ fallenden Sonnenstrahlen:
+	\begin{equation}
+		\overrightarrow{x}=\left(\begin{array}{r} 0 \\ 0 \\ 60\end{array}\right) + \lambda \cdot \left(\begin{array}{r} 2 \\ 4 \\ -3\end{array}\right)
+	\end{equation}
+	
+	Bedingung für Spurpunkt mit $x_1$-$x_2$-Ebene:\quad $x_3 = 0$
+
+	Punkt in der $x_1$-$x_2$-Ebene: $0 = 60 -3 \lambda \Leftrightarrow 60 = 3\lambda \Leftrightarrow \lambda = 20$
+	
+	Schattenpunkt: $S'(40|80|0)$
+	
 	\subsection{Schatten einer Plakatwand}
 	Vor einem Haus steht eine Plakatwand, die \SI{3}{\m} breit und \SI{6}{m} hoch ist. Ein Punkt der Wand ist $A(6|2|6)$. Auf die Plakatwand fällt paralleles Sonnenlicht. Die Richtung der Sonnenstrahlen ist gegeben durch den Vektor
 	\begin{equation*}
@@ -135,7 +161,7 @@
 	
 	\paragraph{Für g gilt:} 
 	
-	Punkt von \textbf{g} in der $x_2\text{-}x_3$-Ebene:\quad $x_1 = 0 \Leftrightarrow 0 = 6 + -3 \lambda \Leftrightarrow \lambda = 2$
+	Punkt von \textbf{g} in der $x_2\text{-}x_3$-Ebene:\quad $x_1 = 0 \Leftrightarrow 0 = 6 - 3 \lambda \Leftrightarrow \lambda = 2$
 	
 	Ortsvektor des Spurpunkts: 
 	\begin{equation}
@@ -183,5 +209,77 @@
 		\end{equation}
 		Die Geraden scheiden sich im Punkt $S(-7|6|3)$.
 	\end{itemize}
+	
+	\subsection{Flugzeugcrash}
+	Ein Passagierflugzeug $\text{F}_1$ befindet sich im Punkt  $A(10|30|2)$ und fliegt geradlinig in Richtung des Punktes $B(40|90|2)$. Ein Sportflugzeug $\text{F}_2$ befindet sich zum gleichen Zeitpunkt im Punkt $C(70|90|11)$ und nimmt Kurs auf den Punkt $D(70|110|8)$ (alle Angaben in km).
+	
+	\paragraph{a)} Begründen Sie, dass sich die beiden Flugzeuge auf Kollisionskurs befinden.
+	
+	\subparagraph{zu $\text{F}_1$} Mit den eingesetzten Punkten $A$ und $B$ in die Zweipunktegleichung \ref{eq:1.1zpg} ergibt sich: 
+	\begin{equation}
+		\mathbf{F_1}: \overrightarrow{x}=\left(\begin{array}{r} 10 \\ 30 \\ 2\end{array}\right) + \lambda \cdot \left(\begin{array}{r} 30 \\ 60 \\ 0\end{array}\right)
+	\end{equation}
+	
+	\subparagraph{zu $\text{F}_2$} Mit den eingesetzten Punkten $C$ und $D$ in die Zweipunktegleichung \ref{eq:1.1zpg} ergibt sich: 
+	\begin{equation}
+		\mathbf{F_2}: \overrightarrow{x}=\left(\begin{array}{r} 70 \\ 90 \\ 11\end{array}\right) + \mu \cdot \left(\begin{array}{r} 0 \\ 20 \\ -3\end{array}\right)
+	\end{equation}
+	
+	\begin{itemize}
+		\item \textit{Test auf Parallelität} \\ 
+		Die Richtungsvektoren sind nicht kollinear, daher sind die Geraden nicht parallel.
+		
+		\item \textit{Lageentscheidung (Gleichsetzungsverfahren)} \\
+		\begin{alignat*}{2}
+			\left(\begin{array}{r} 10 \\ 30 \\ 2\end{array}\right) + \lambda \cdot \left(\begin{array}{r} 30 \\ 60 \\ 0\end{array}\right) &= \left(\begin{array}{r} 70 \\ 90 \\ 11\end{array}\right) + \mu \cdot \left(\begin{array}{r} 0 \\ 20 \\ -3\end{array}\right) \\
+			&\iff \left(\begin{aligned} 30 \lambda &= 60 \\ 60 \lambda - 20 \mu &= 60 \\ -3 \mu &= 9 \end{aligned}\right) \begin{array}{c} \text{(I)} \\ \text{(II)} \\ \text{(III)}\end{array} \numberthis
+		\end{alignat*}
+		
+		Lösung: $\begin{array}{l}
+			\text{(I) nach } \lambda: \quad 30 \lambda = 60 \Leftrightarrow \lambda = 2 \\ \text{(III) nach } \mu: \quad 3\mu = 9 \Leftrightarrow \mu = 3 \\ \text{Probe in  (II)}: \quad 60\cdot2 -20\cdot3 = 60 \checkmark \end{array}$
+		
+		Das Gleichungssystem ist für $\lambda = 2$ und $\mu = 3$ erfüllt, somit gibt es einen Schnittpunkt.
+		
+		\item \textit{Schnittpunktberechnung} \\
+		$\lambda$ in $\text{F}_1$ eingesetzt gibt: 
+		\begin{equation}
+			\overrightarrow{x}=\left(\begin{array}{r} 10 \\ 30 \\ 2\end{array}\right) + 2 \cdot \left(\begin{array}{r} 30 \\ 60 \\ 0\end{array}\right) = \left(\begin{array}{r} 70 \\ 150 \\ 2\end{array}\right)
+		\end{equation}
+		Die Flugzeuge kollidieren im Punkt $S(70|150|2)$.
+	\end{itemize}
+	
+	\paragraph{b)} Prüfen Sie, ob es tatsächlich zum Crash kommt, wenn sich $\text{F}_1$ mit der Geschwindigkeit 800 km/h, $\text{F}_2$ mit 350 km/h bewegt.
+	
+	Verbindungsvektor zwischen $A$ und $S$:
+	\begin{equation}
+		\overrightarrow{f_1} = \left(\begin{array}{r} 70 - 10 \\ 150 - 30 \\ 2 - 2\end{array}\right) = \left(\begin{array}{r} 60 \\ 120 \\ 0\end{array}\right) 
+	\end{equation}
+		
+	Länge des Verbindungsvektors zwischen $A$ und $S$:
+	\begin{equation}
+		\left|\overrightarrow{f_1}\right| = \sqrt{60^2 + 120^2 + 0^2} = \SI{134,16}{km}
+	\end{equation}
+	
+	Zeit bis zum Eintreffen:
+	\begin{equation}
+		\frac{\SI{134,16}{km}}{\SI{800}{\km\per\hour}} = \SI{0,1677}{\hour}
+	\end{equation}
+	
+	Verbindungsvektor zwischen $C$ und $S$:
+	\begin{equation}
+		t_1 = \overrightarrow{f_2} = \left(\begin{array}{r} 70 - 70 \\ 150 - 90 \\ 2 - 11\end{array}\right) = \left(\begin{array}{r} 0 \\ 60 \\ -9\end{array}\right) 
+	\end{equation}
+	
+	Länge des Verbindungsvektors zwischen $C$ und $S$:
+	\begin{equation}
+		\left|\overrightarrow{f_2}\right| = \sqrt{0^2 + 60^2 + (-9)^2} = \SI{60,67}{km}
+	\end{equation}
+	
+	Zeit bis zum Eintreffen:
+	\begin{equation}
+		t_2 = \frac{\SI{60,67}{km}}{\SI{350}{\km\per\hour}} = \SI{0,1733}{\hour}
+	\end{equation}
+	
+	Es kommt vermutlich zum Crash, weil beide Flugzeuge zu einem sehr ähnlichen Zeitpunkt im Punkt $S$ eintreffen werden.
 	
 \end{document}
