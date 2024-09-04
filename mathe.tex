@@ -252,7 +252,7 @@
 		\begin{equation}
 			\overrightarrow{x}=\left(\begin{array}{r} 10 \\ 30 \\ 2\end{array}\right) + 2 \cdot \left(\begin{array}{r} 30 \\ 60 \\ 0\end{array}\right) = \left(\begin{array}{r} 70 \\ 150 \\ 2\end{array}\right)
 		\end{equation}
-		Die Flugzeuge kollidieren im Punkt $S(70|150|2)$.
+		Die Flugzeuge fliegen beide durch den Punkt $S(70|150|2)$.
 	\end{itemize}
 	
 	\paragraph{b)} Prüfen Sie, ob es tatsächlich zum Crash kommt, wenn sich $\text{F}_1$ mit der Geschwindigkeit 800 km/h, $\text{F}_2$ mit 350 km/h bewegt.
@@ -264,29 +264,53 @@
 		
 	Länge des Verbindungsvektors zwischen $A$ und $S$:
 	\begin{equation}
-		\left|\overrightarrow{f_1}\right| = \sqrt{60^2 + 120^2 + 0^2} = \SI{134,16}{km}
+		\left|\overrightarrow{f_1}\right| = \sqrt{60^2 + 120^2 + 0^2} \approx \SI{134,16}{km}
 	\end{equation}
 	
 	Zeit bis zum Eintreffen:
 	\begin{equation}
-		\frac{\SI{134,16}{km}}{\SI{800}{\km\per\hour}} = \SI{0,1677}{\hour}
+		\frac{\SI{134,16}{km}}{\SI{800}{\km\per\hour}} \approx \SI{0,1677}{\hour}
 	\end{equation}
 	
 	Verbindungsvektor zwischen $C$ und $S$:
 	\begin{equation}
-		t_1 = \overrightarrow{f_2} = \left(\begin{array}{r} 70 - 70 \\ 150 - 90 \\ 2 - 11\end{array}\right) = \left(\begin{array}{r} 0 \\ 60 \\ -9\end{array}\right) 
+		\overrightarrow{f_2} = \left(\begin{array}{r} 70 - 70 \\ 150 - 90 \\ 2 - 11\end{array}\right) = \left(\begin{array}{r} 0 \\ 60 \\ -9\end{array}\right) 
 	\end{equation}
 	
 	Länge des Verbindungsvektors zwischen $C$ und $S$:
 	\begin{equation}
-		\left|\overrightarrow{f_2}\right| = \sqrt{0^2 + 60^2 + (-9)^2} = \SI{60,67}{km}
+		\left|\overrightarrow{f_2}\right| = \sqrt{0^2 + 60^2 + (-9)^2} \approx \SI{60,67}{km}
 	\end{equation}
 	
 	Zeit bis zum Eintreffen:
 	\begin{equation}
-		t_2 = \frac{\SI{60,67}{km}}{\SI{350}{\km\per\hour}} = \SI{0,1733}{\hour}
+		t_2 = \frac{\SI{60,67}{km}}{\SI{350}{\km\per\hour}} \approx \SI{0,1733}{\hour}
 	\end{equation}
 	
 	Es kommt vermutlich zum Crash, weil beide Flugzeuge zu einem sehr ähnlichen Zeitpunkt im Punkt $S$ eintreffen werden.
+	
+	\subsection{Rathaus (Abituraufgabe)}
+	Ein Rathaus besteht aus einem Quader mit aufgesetztem Walmdach (siehe \ref{fig:004_rathaus}; Maße in Meter).
+	
+	\begin{figure}[ht]
+		\centering
+		\includegraphics[width=.5\textwidth]{ma_004_rathaus.pdf}
+		\caption{Skizze des Rathauses.}
+		\label{fig:004_rathaus}
+	\end{figure}
+	
+	Gegeben sind die Punkte $D(0|0|15)$, $E(8|0|15)$, $F(8|20|15)$, $G(0|20|15)$ und $T(4|17|21)$.
+	
+	Neben dem Rathaus steht im Punkt $F_1(4|37|0)$ ein \SI{13}{\m} hoher senkrechter Fahnenmast mit der Spitze $F_2$.
+	
+	Der Vektor $\overrightarrow{v}=\left(\begin{array}{r} 1 \\ -17 \\ -11\end{array}\right)$ gibt die Richtung des einfallenden Sonnenlichts an.
+	
+	\paragraph{a)} Zeigen Sie, dass der Schatten des Mastes $\overline{F_1F_2}$ eine Rathauswand trifft.
+	
+	
+	
+	\paragraph{b)} Berechnen Sie die gesamte Länge des Schattens.
+	
+	
 	
 \end{document}
