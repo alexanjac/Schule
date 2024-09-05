@@ -307,9 +307,38 @@
 	
 	\paragraph{a)} Zeigen Sie, dass der Schatten des Mastes $\overline{F_1F_2}$ eine Rathauswand trifft.
 	
+	Geradengleichung Schattenspitze:
+	\begin{equation}
+		\mathbf{g}: \overrightarrow{x}=\left(\begin{array}{r} 4 \\ 37 \\ 13\end{array}\right) + \lambda \cdot \left(\begin{array}{r} 1 \\ -17 \\ -11\end{array}\right) = \left(\begin{array}{r} 4 + \lambda \\ 37 - 17 \lambda \\ 13 - 11 \lambda\end{array}\right)
+	\end{equation}
 	
+	Da der Fahnenmast in positiver $x_2$-Richtung zum Rathaus steht, kann der Schatten nur auf die Wand $BCGF$ fallen.
+	
+	Bedingung für Spurpunkt auf Wand (= Ebene): $x_2 = 20$
+	
+	Punkt in Wand von $\mathbf{g}$: $x_2 = 20 = 37 - 17 \lambda \Leftrightarrow \lambda = 1$ 
+	
+	Einsetzen von $\lambda$ in $\mathbf{g}$:
+	\begin{equation}
+		\vec{f_2'} = \left(\begin{array}{r} 5 \\ 20 \\ 2 \end{array}\right)
+	\end{equation}
+	
+	Die Spitze des Rathausmastes liegt also in $F_2'(5|20|2)$ und damit auf der Rathauswand.
 	
 	\paragraph{b)} Berechnen Sie die gesamte Länge des Schattens.
+	
+	An der Kante zwischen Haus und Boden macht der Schatten senkrecht unter seiner Spitze einen Knick im Punkt $K(5|20|0)$. Für die Länge dieses Schattenabschnitts gilt intuitiv: $\overline{F_2'K} = \SI{2}{\m}$.
+	
+	Die Strecke des Schattenabschnitts $\overline{F_1K}$ ergibt sich wie folgt:
+	\begin{equation}
+		\overrightarrow{f_1k} = \left(\begin{array}{r} 4 \\ 37 \\ 0\end{array}\right) - \left(\begin{array}{r} 5 \\ 20 \\ 0\end{array}\right) = \left(\begin{array}{r} -1 \\ 17 \\ 0\end{array}\right)
+	\end{equation}
+	
+	\begin{equation}
+		\overline{F_1K} = \left|f_1k\right| = \sqrt{(-1)^2 + 17^2 + 0^2} \approx \SI{17,0}{\m}
+	\end{equation}
+	
+	Insgesamt ergibt sich also für den Schatten eine Länge von $\overline{F_2'K} + \overline{F_1K} = \SI{19}{m}.·$
 	
 	
 	
