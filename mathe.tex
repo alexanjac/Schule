@@ -299,7 +299,7 @@
 		\label{fig:004_rathaus}
 	\end{figure}
 	
-	Gegeben sind die Punkte $D(0|0|15)$, $E(8|0|15)$, $F(8|20|15)$, $G(0|20|15)$ und $T(4|17|21)$.
+	Gegeben sind die Punkte $D(0|0|15)$, $E(8|0|15)$, $F(8|20|15)$, \linebreak $G(0|20|15)$ und $T(4|17|21)$.
 	
 	Neben dem Rathaus steht im Punkt $F_1(4|37|0)$ ein \SI{13}{\m} hoher senkrechter Fahnenmast mit der Spitze $F_2$.
 	
@@ -335,11 +335,75 @@
 	\end{equation}
 	
 	\begin{equation}
-		\overline{F_1K} = \left|f_1k\right| = \sqrt{(-1)^2 + 17^2 + 0^2} \approx \SI{17,0}{\m}
+		\overline{F_1K} = \left|\overrightarrow{f_1k}\right| = \sqrt{(-1)^2 + 17^2 + 0^2} \approx \SI{17,0}{\m}
 	\end{equation}
 	
 	Insgesamt ergibt sich also für den Schatten eine Länge von $\overline{F_2'K} + \overline{F_1K} = \SI{19}{m}.·$
 	
+	\subsection{Ebenengleichungen}
+	Geben Sie eine Gleichung der Ebene durch die Punkte $A$, $B$ und $C$ an.
 	
+	\paragraph{a)}$A(2|-4|0)$, $B(-3|1|4)$ und $C(5|0|1)$
+	\begin{equation}
+		e: \vec{x} = \left(\begin{array}{r} 2 \\ -4 \\ 0\end{array}\right) + \lambda \cdot \left(\begin{array}{r} -5 \\ 5 \\ 4\end{array}\right) + \mu \cdot \left(\begin{array}{r} 3 \\ -4 \\ 1\end{array}\right)
+	\end{equation}
+	
+	\paragraph{b)}$A(1|-2|5)$, $B(-5|4|3)$ und $C(0|0|1)$
+	\begin{equation}
+		e: \vec{x} = \left(\begin{array}{r} 1 \\ -2 \\ 5\end{array}\right) + \lambda \cdot \left(\begin{array}{r} -6 \\ 6 \\ -2\end{array}\right) + \mu \cdot \left(\begin{array}{r} -1 \\ 2 \\ -4\end{array}\right)
+	\end{equation}
+	
+	\subsection{Seitenflächen eines Quaders}
+	Bestimmen Sie jeweils eine Parametergleichung der Ebene, in der die Seitenflächen $ABFE$ bzw. $BCGF$ des Quaders liegen.
+	\begin{figure}[ht]
+		\centering
+		\includegraphics[width=.3\textwidth]{ma_005_quader.pdf}
+		\caption{Skizze des Quaders.}
+		\label{fig:005_quader}
+	\end{figure}
+	
+	\paragraph{Seitenfläche $ABFE$:} $A(4|0|0)$, $B(4|5|0)$, $F(4|5|3)$, $E(4|0|3)$
+	
+	Stützvektor zum Punkt $A$ und Richtungsvektoren zu $B$ und $E$ geben:
+	\begin{equation}
+		e: \overrightarrow{x} = \left(\begin{array}{r} 4 \\ 0 \\ 0\end{array}\right) + \lambda \cdot \left(\begin{array}{r} 0 \\ 0 \\ 3\end{array}\right) + \mu \cdot \left(\begin{array}{r} 0 \\ 5 \\ 0\end{array}\right) \text{ mit } \lambda,\,\mu \left[0;1\right]
+	\end{equation}
+	
+	\paragraph{Seitenfläche $BCGF$:} $B(4|5|0)$, $C(0|5|0)$, $F(0|5|3)$, $F(4|5|3)$
+	
+	Stützvektor zum Punkt $C$ und Richtungsvektoren zu $B$ und $G$ geben:
+	\begin{equation}
+		e: \overrightarrow{x} = \left(\begin{array}{r} 0 \\ 5 \\ 0\end{array}\right) + \lambda \cdot \left(\begin{array}{r} 5 \\ 0 \\ 0\end{array}\right) + \mu \cdot \left(\begin{array}{r} 0 \\ 0 \\ 3\end{array}\right) \text{ mit } \lambda,\,\mu \left[0;1\right]
+	\end{equation}
+	
+	\subsection{Ebenen einer Pyramide}
+	Gegeben ist eine Pyramide mit einem Quadrat der Seitenlänge 4 als Grundfläche sowie dem Punkt $S(2|2|4)$ als Spitze.
+	\begin{figure}[ht]
+		\centering
+		\includegraphics[width=.5\textwidth]{ma_006_pyramidepg.pdf}
+		\caption{Skizze der Pyramide.}
+		\label{fig:006_pyramidepg}
+	\end{figure}
+	
+	\paragraph{a)} Bestimmen Sie eine Parametergleichung der Ebene $e_1$, in der die Bodenfläche liegt. 
+	
+	Entnehmen Sie die notwendigen Informationen aus der Zeichnung.
+	
+	Mit $D = O$ als Aufpunkt der Ebene ergibt sich für die Ebenengleichung:
+	\begin{equation}
+		e: \overrightarrow{x}= \lambda \cdot \left(\begin{array}{r} 1 \\ 0 \\ 0\end{array}\right) + \mu \cdot \left(\begin{array}{r} 0 \\ 1 \\ 0\end{array}\right) \text{ mit } \lambda,\,\mu \in \left[0;4\right]
+	\end{equation}
+	
+	\paragraph{b)} Bestimmen Sie eine Parametergleichung der Ebene $e_2$, in der die Mittenfläche liegt.
+	
+	Für den Mittelpunkt zwischen $D$ und $S$ gilt:
+	\begin{equation}
+		D_m = \frac{1}{2} \left(\vec{d} + \vec{s}\right) = \left(\begin{array}{r} 1 \\ 1 \\ 2\end{array}\right)
+	\end{equation}
+	
+	Aus der Symmetrie der Pyramide ergibt sich, dass jeder Mittelpunkt einen Abstand von $\SI{1}{LE}$ zur Spitze in $x_1$- bzw. $x_2$-Richtung besitzt. Daher gilt für die Ebenengleichung:
+	\begin{equation}
+		e: \overrightarrow{x}=\left(\begin{array}{r} 1 \\ 1 \\ 2\end{array}\right) + \lambda \cdot \left(\begin{array}{r} 1 \\ 0 \\ 0\end{array}\right) + \mu \cdot \left(\begin{array}{r} 0 \\ 1 \\ 0\end{array}\right) \text{ mit } \lambda,\,\mu \in \left[0;2\right]
+	\end{equation}
 	
 \end{document}

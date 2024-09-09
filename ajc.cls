@@ -94,7 +94,6 @@
                 pdftitle={Notes},
                 pdfcreator={Vorlage von AleJac},
                 pdflang={de-DE},
-                linktocpage,
                 hidelinks]{hyperref}
 
 % Math
