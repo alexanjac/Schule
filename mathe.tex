@@ -11,7 +11,6 @@
 
 \begin{document}
 	\section{Vektoren}
-	
 	\subsection{Spurpunkte berechnen}
 	\paragraph{a)} Bestimmen Sie die Spurpunkte der Geraden
 	\begin{equation}
@@ -404,6 +403,132 @@
 	Aus der Symmetrie der Pyramide ergibt sich, dass jeder Mittelpunkt einen Abstand von $\SI{1}{LE}$ zur Spitze in $x_1$- bzw. $x_2$-Richtung besitzt. Daher gilt für die Ebenengleichung:
 	\begin{equation}
 		e: \overrightarrow{x}=\left(\begin{array}{r} 1 \\ 1 \\ 2\end{array}\right) + \lambda \cdot \left(\begin{array}{r} 1 \\ 0 \\ 0\end{array}\right) + \mu \cdot \left(\begin{array}{r} 0 \\ 1 \\ 0\end{array}\right) \text{ mit } \lambda,\,\mu \in \left[0;2\right]
+	\end{equation}
+	
+	\subsection{Spiegel im Museum}
+	In der Ecke eines großen Museumsraumes wurde für eine Kunstinstallation entsprechend der Abbildung \ref{fig:007_spiegel} ein dreieckiger Spiegel eingebaut. 
+	\begin{figure}[ht]
+		\centering
+		\includegraphics[width=.5\textwidth]{ma_007_spiegelmuseum.pdf}
+		\caption{Skizze des Museumsraumes.}
+		\label{fig:007_spiegel}
+	\end{figure}
+	
+	\paragraph{a)} Stellen Sie eine Parametergleichung der Ebene $e$ auf, in der der Spiegel liegt. Entnehmen Sie die notwendigen Informationen aus der Abbildung.
+	\begin{equation}
+		e: \overrightarrow{x}=\left(\begin{array}{r} 0 \\ 0 \\ 3\end{array}\right) + \lambda \cdot \left(\begin{array}{r} 1 \\ 0 \\ -3\end{array}\right) + \mu \cdot \left(\begin{array}{r} 0 \\ 1 \\ -3\end{array}\right) \text{ mit } \lambda,\,\mu \in \mathbb{R} \text{ und } \lambda + \mu \leq 1
+	\end{equation}
+	
+	\paragraph{b)} Zeigen Sie, dass der Punkt $S(\frac{1}{3}|\frac{1}{2}|\frac{1}{2})$ auf der Spiegelfläche liegt.
+	\begin{equation}
+		\left(\begin{array}{r} 0,\overline{3} \\ 0,5 \\ 0,5\end{array}\right) = \left(\begin{array}{r} 0 \\ 0 \\ 3\end{array}\right) + \lambda \cdot \left(\begin{array}{r} 1 \\ 0 \\ -3\end{array}\right) + \mu \cdot \left(\begin{array}{r} 0 \\ 1 \\ -3\end{array}\right)
+	\end{equation}
+	
+	Um die Bedingung für die $x_1$-Koordinate zu erfüllen, muss intuitiv gelten:
+	\begin{equation}
+		x_1 = 0,\overrightarrow{3} = 0 + \lambda \cdot 1 + \mu \cdot 0 \Leftrightarrow \lambda = 0,\overline{3}.
+	\end{equation}
+	
+	Um die Bedingung für die $x_2$-Koordinate zu erfüllen, muss intuitiv gelten:
+	\begin{equation}
+		x_2 = 0,5 = 0 + \lambda \cdot 0 + \mu \cdot 1 \Leftrightarrow \mu = 0,5.
+	\end{equation}
+	
+	Einsetzen von $\lambda$ und $\mu$ gibt für die $x_3$-Koordinate:
+	\begin{equation}
+		x_3 = 3 + \frac{1}{3} \cdot (-3) + 0,5 \cdot (-3) = 0,5 \checkmark
+	\end{equation}
+	
+	Die notwendige Bedingung $\lambda + \mu \leq 1$ ist ebenfalls erfüllt, denn
+	\begin{equation}
+		0,\overline{3} + 0,5 = 0,8\overline{3} \leq 1
+	\end{equation}
+	
+	$\qed$
+	
+	\subsection{Ebenengleichungen}
+	Geben Sie eine Gleichung der beschriebenen Ebene in Koordinatenform an.
+	\paragraph{a)} $e_1$ ist eine Parallelebene zur $x_1$-$x_2$-Ebene durch den Punkt $P(1|2|3)$.
+	\begin{equation}
+		e_1: x_3 = 3 \Leftrightarrow x_3 - 3 = 0
+	\end{equation}
+	
+	\paragraph{b)} $e_2$ ist eine Parallelebene zur $x_2$-$x_3$-Ebene durch den Punkt $Q(5|-2|-1)$.
+	\begin{equation}
+		e_2: x_1 = 5 \Leftrightarrow x_1 - 5 = 0
+	\end{equation}
+	
+	\paragraph{a)} $e_3$ ist eine Parallelebene zur $x_1$-$x_3$-Ebene durch den Punkt $R(-1|-3|-2)$.
+	\begin{equation}
+		e_1: x_2 = -3 \Leftrightarrow x_2 +3 = 0
+	\end{equation}
+	
+	\subsection{Noch mehr Ebenengleichungen}
+	Geben Sie eine Koordinatengleichung der Ebenen an, die durch die markierten Flächen ausschnittsweise dargestellt sind.
+	
+	\begin{figure}[ht]
+		\centering
+		\begin{minipage}[b]{0.2\textwidth}
+			\includegraphics[width=\textwidth]{ma_008_flache1.pdf}
+			\label{fig:008_flache1}
+			\begin{center}
+				a)
+			\end{center}
+		\end{minipage}
+		\hfill
+		\begin{minipage}[b]{0.2\textwidth}
+			\includegraphics[width=\textwidth]{ma_009_flache2.pdf}
+			\label{fig:009_flache2}
+			\begin{center}
+				b)
+			\end{center}
+		\end{minipage}
+		\hfill
+		\begin{minipage}[b]{0.2\textwidth}
+			\includegraphics[width=\textwidth]{ma_010_flache3.pdf}
+			\label{fig:010_flache3}
+			\begin{center}
+				c)
+			\end{center}
+		\end{minipage}
+	\end{figure}
+	
+	\paragraph{a)} Fläche ist senkrecht zur $x_1$-Achse.
+	\begin{equation}
+		e_1: x_1 - 1 = 0
+	\end{equation}
+	
+	\paragraph{b)} Fläche ist senkrecht zur $x_2$-Achse.
+	\begin{equation}
+		e_2: x_2 + 2 = 0
+	\end{equation}
+	
+	\paragraph{c)} Fläche ist senkrecht zur $x_3$-Achse.
+	\begin{equation}
+		e_3: x_3 - 2 = 0
+	\end{equation}
+	
+	\subsection{Achsenabschnittsform}
+	Wandeln Sie die Gleichungen der Ebenen in die Achsenabschnittsform um.
+	
+	\paragraph{a)} $e_a: 2x_1 + x_2 + 2x_3 = 4$
+	\begin{equation}
+		e_a: \frac{x_1}{2} + \frac{x_2}{4} + \frac{x_3}{2} = 1
+	\end{equation}
+	
+	\paragraph{b)} $e_b: 4x_1 - 3x_2 - 8x_3 = 12$
+	\begin{equation}
+		e_b: \frac{x_1}{3} - \frac{x_2}{4} - \frac{x_3}{\frac{2}{3}} = 1
+	\end{equation}
+	
+	\paragraph{c)} $e_c: 3x_1 - 2x_3 = 6$
+	\begin{equation}
+		e_c: \frac{x_1}{2} - \frac{x_3}{3} = 1
+	\end{equation}
+	
+	\paragraph{d)} $e_d: 3x_1 - 6 = 0$
+	\begin{equation}
+		e_d: \frac{x_1}{2} = 1
 	\end{equation}
 	
 \end{document}
