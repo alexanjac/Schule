@@ -590,11 +590,61 @@
 	
 	Die Gerade verläuft echt parallel zur Ebene.
 	
-	\paragraph{d)}
+	\subsection{Geradenschar}
+	Gegeben sind die Ebene $e: x_1 + 2x_2 + 2x_3 - 5 = 0$ sowie die Geradenschar
 	\begin{equation}
-		e: \overrightarrow{x} = \left(\begin{array}{r} 3 \\ 2 \\ 1\end{array}\right) + \lambda \cdot \left(\begin{array}{r} 1 \\ 0 \\ 1\end{array}\right) + \mu \cdot \left(\begin{array}{r} 0 \\ 1 \\ 1\end{array}\right) \quad ; \quad g: \left(\begin{array}{r} 1 \\ 2 \\ 3\end{array}\right) + \lambda \cdot \left(\begin{array}{r} 1 \\ 1 \\ 2\end{array}\right)
+		g_a: \vec{x} = \left(\begin{array}{r} 4 \\ 3 \\ 2\end{array}\right) + \lambda \cdot \left(\begin{array}{r} a \\ -1 \\ -4\end{array}\right) \text{ mit } \lambda \in \mathbb{R} \text{ und } a \in \mathbb{R}
 	\end{equation}
 	
+	Untersuchen Sie die Lagebeziehung zwischen der Ebene $e$ und den Geraden der Schar $g_a$ in Abhängigkeit von $a$.
+	
+	Skalarprodukt der Vektoren für Parallelität:
+	\begin{equation}
+		\vec{n}\cdot\vec{u} = \left(\begin{array}{r} 1 \\ 2 \\ 2\end{array}\right) \cdot \left(\begin{array}{r} a \\ -1 \\ -4\end{array}\right) = a -6
+	\end{equation}
+	
+	Für $a = 6$ sind die Geraden parallel.
+	
+	Prüfen nach Identität ($\vec{a}$ in $e$):
+	\begin{equation}
+		4 + 2 \cdot 3 + 2 \cdot 2 - 5 = 9 \neq 0
+	\end{equation}
+	
+	Die Gerade $g_6$ ist echt parallel zu $e$.
+	
+	\subsection{Parallelität von Ebenen}
+	Zeigen Sie, dass die Ebenen $e_1$ und $e_2$ parallel sind. Untersuchen Sie weiter, ob die beiden Ebenen identisch oder echt parallel sind.
+	\begin{equation}
+		e_1: 2x_1 - x_2 - 5 = 0 \quad ; \quad e_2: \vec{x} = \left(\begin{array}{r} 2 \\ -1 \\ 0\end{array}\right) + \lambda \cdot \left(\begin{array}{r} 1 \\ 2 \\ 2\end{array}\right) + \mu \cdot \left(\begin{array}{r} 1 \\ 2 \\ -3\end{array}\right)
+	\end{equation}
+	
+	Normalenvektoren:
+	\begin{equation}
+		\vec{n_1} = \left(\begin{array}{r} 2 \\ -1 \\ 0\end{array}\right)
+	\end{equation}
+	\begin{equation}
+		\vec{n_2} = \vec{u} \times \vec{v} = \left(\begin{array}{r} -2 \\ 5 \\ 0\end{array}\right)
+	\end{equation}
+	
+	Die Ebenen sind nicht parallel, weil ihre Richtungsvektoren keine Vielfachen voneinander sind.
+	
+	\subsection{Parameter und Ebenen 1. Teil}
+	Gegeben sind die Ebenen $e_1$ und $e_2$:
+	\begin{equation}
+		e_1: \left(\begin{array}{r} 1 \\ -1 \\ 1\end{array}\right) \cdot \vec{x} - 3 = 0 
+	\end{equation}
+	
+	und
+	\begin{equation}
+		\overrightarrow{x}=\lambda \cdot \left(\begin{array}{r} 0 \\ -1 \\ 5\end{array}\right) + \mu \cdot \left(\begin{array}{r} 1 \\ 0 \\ -4\end{array}\right)
+	\end{equation}
+	
+	\paragraph{a)} Zeigen Sie, dass die beiden Ebenen senkrecht aufeinander stehen.
+	
+	
+	
+	
+	\paragraph{b)} Bestimmen Sie eine Gleichung der Schnittgeraden $g_S$ der beiden Ebenen.
 	
 	
 	
@@ -603,7 +653,20 @@
 	
 	
 	
+	\subsection{Parameter und Ebenen 2. Teil}
+	Gegeben ist die Ebenenschar $e_k$ und die Geradenschar $g_k$ mit
+	\begin{equation}
+		e_k: kx_1 + x_2 - x_3 - 2k = 0
+	\end{equation}
+	und 
 	
+	\begin{equation}
+		g_k: \vec{x} = \mu \cdot \left(\begin{array}{r} k \\ k \\ 2\end{array}\right) \text{ mit } k,\,\mu \in \mathbb{R}.
+	\end{equation}
+	
+	\paragraph{a)} Ermitteln Sie die Werte für $k$, für die die Geraden $g_k$ parallel zur zugehörigen Ebene $e_k$ verlaufen.
+	
+	\paragraph{b)} Prüfen Sie, ob dabei echte Parallelität vorliegt, oder ob die entsprechende Gerade vollständig in der zugehörigen Ebene verläuft. 
 	
 	
 	
