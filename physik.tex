@@ -187,6 +187,65 @@
 	
 	Maximale gegenseitige Verstärkung bei Wellenlängen von $\lambda = \frac{\SI{39}{\m}}{k}$, wobei $k$ eine beliebige ganze Zahl ist.
 	
+	\subsection{Ungedämpfter Schwingkreis}
+	
+	\subsubsection{Herstellung Schwingkreis}
+	Es soll ein Schwingkreis mit einer Eigenfrequenz von \SI{7,5}{\kilo\Hz} hergestellt werden.
+	
+	\paragraph{a)} Welche Kapazität muss ein Kondensator haben, wenn man eine Spule mit der Induktivität $L = \SI{0,25}{\H}$ verwendet?
+	
+	Formel für C aus Formel für Schwingungsdauer herleiten:
+	\begin{equation}\label{formelc}
+		\begin{split}
+			T &= 2\pi \cdot \sqrt{LC} \\
+			\Leftrightarrow LC &= \left(\frac{T}{2\pi}\right)^2 \\
+			\Leftrightarrow C &= \frac{\left(\frac{T}{2\pi}\right)^2}{L} \\
+			\Leftrightarrow C &= \frac{T^2}{4\pi^2 \cdot L}
+		\end{split}
+	\end{equation}
+	
+	T berechnen:
+	\begin{equation}
+		T = \frac{1}{f} = \frac{1}{\SI{7500}{\Hz}} = \SI{1,33e-4}{s}
+	\end{equation}
+	
+	Werte in Formel aus \ref{formelc} eingesetzt:
+	\begin{equation}
+		C = \frac{\left(\SI{1,33e-4}{s}\right)^2}{4\pi^2 \cdot \SI{0,25}{\H}} = \SI{1,79e-9}{\farad} = \SI{1,79}{\nano\farad}
+	\end{equation}
+	
+	\paragraph{b)} Welche Induktivität muss eine Spule haben, wenn man einen Kondensator mit der Kapazität $C = \SI{10}{\micro\farad}$ verwendet?
+	
+	Gleicher Ansatz wie in Herleitung \ref{formelc} liefert:
+	\begin{equation}
+		L = \frac{T^2}{4\pi^2 \cdot C}
+	\end{equation}
+	
+	Mit eingesetzten Werten:
+	\begin{equation}
+		L = \frac{T^2}{4\pi^2 \cdot C} = \frac{\left(\SI{1,33e-4}{s}\right)^2}{4\pi^2 \cdot \SI{e-5}{\farad}} = \SI{0,337}{\H}
+	\end{equation}
+	
+	\subsubsection{Frequenzen synchronisieren}
+	An einer Feder, welche durch eine Kraft von \SI{4}{\newton} um \SI{2,4}{\centi\meter} gedehnt wird, hängt ein Körper mit der Masse \SI{0,5}{\kilogram}. In einem elektrischen Schwingkreis mit einer Induktivität von \SI{75}{\H} soll eine Schwingung erzeugt werden, die in ihrer Frequenz mit der Federschwingung übereinstimmt. Welche Kapazität ist erforderlich?
+	
+	Federhärte $D$ berechnen:
+	\begin{equation}
+		D = \frac{F}{s} = \frac{\SI{4}{\newton}}{\SI{0,024}{\m}} = \SI{166}{\newton\per\meter}
+	\end{equation}
+	
+	Gleichsetzen der beiden Schwingungsdauern:
+	\begin{equation}
+		\begin{split}
+			T_\text{Schwingk.} &= T_\text{Feder}\\
+			\Leftrightarrow 2\pi \cdot \sqrt{LC} &= 2\pi \cdot \sqrt{\frac{m}{D}} \\
+			\Leftrightarrow \sqrt{LC} &= \sqrt{\frac{m}{D}} \\
+			\Leftrightarrow LC &= \frac{m}{D} \\
+			\Leftrightarrow C &= \frac{m}{DL} \\
+			\Leftrightarrow C &= \frac{\SI{0,5}{\kilogram}}{\SI{166}{\newton\per\meter} \cdot \SI{75}{\H}} = \SI{4,02e-5}{\farad} = \SI{40,2}{\micro\farad}
+		\end{split}
+	\end{equation}
+	
 	\section{Quanten und Atome}
 
 \end{document}
