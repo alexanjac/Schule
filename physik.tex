@@ -106,6 +106,8 @@
 	
 	von $\omega^2 s_\text{max}$ abhängt. Aus der Aufgabenstellung ergibt sich, dass $s_\text{max}$ unverändert bleibt. Da $\omega^2$ gemäß $\omega^2 = \frac{D}{m}$ umgekehrt proportional zu $m$ ist, verändert sich $a_\text{max}$ um den Faktor $\frac{1}{4}$.
 	
+	\newpage
+	
 	\subsection{Wellenmaschine}
 	Auf einer Wellenmaschine befinden sich 19 gekoppelte Pendel, die im Abstand von \SI{5,00}{\centi\meter} auf der x-Achse angebracht sind. Das Pendel mit der Nummer 1 wird zum Zeitpunkt $t = \SI{0}{\second}$ zu einer harmonischen Schwingung mit der Gleichung $s(t) = s_0 \cdot \sin(\omega \cdot t)$ angeregt. Diese \enquote{Störung} breitet sich längs der positiven x-Achse ungedämpft aus.
 	
@@ -151,6 +153,8 @@
 	
 	$1,5,9,13,17$
 	
+	\newpage
+	
 	\subsection{Mechanische Wellen}
 	\paragraph{Angabe:} Schallgeschwindigkeit in Luft: \SI{340}{\m\per\s}.
 	
@@ -186,6 +190,8 @@
 	\end{equation}
 	
 	Maximale gegenseitige Verstärkung bei Wellenlängen von $\lambda = \frac{\SI{39}{\m}}{k}$, wobei $k$ eine beliebige ganze Zahl ist.
+	
+	\newpage
 	
 	\subsection{Ungedämpfter Schwingkreis}
 	
@@ -245,6 +251,37 @@
 			\Leftrightarrow C &= \frac{\SI{0,5}{\kilogram}}{\SI{166}{\newton\per\meter} \cdot \SI{75}{\H}} = \SI{4,02e-5}{\farad} = \SI{40,2}{\micro\farad}
 		\end{split}
 	\end{equation}
+	
+	\newpage
+	
+	\subsection{Beugung am Gitter}
+	
+	\subsubsection{Gitter}
+	Ein Gitter besitzt 100 Striche pro Millimeter.
+	
+	\paragraph{a)} Auf einem \SI{3}{\meter} entferntem Schirm beträgt der Abstand der beiden Maxima 2. Ordnung \SI{80}{\centi\meter}. Berechne die Wellenlänge des verwendeten Lichts.
+	
+	\begin{equation}
+		\begin{split}
+			\frac{k \cdot \lambda}{g} &= \sin\left(\arctan\left(\frac{a}{e}\right)\right) \\
+			\Leftrightarrow \lambda &= \frac{\sin\left(\arctan\left(\frac{a}{e}\right)\right) \cdot g}{k} \\
+			\Leftrightarrow \lambda &= \frac{\sin\left(\arctan\left(\frac{\SI{0,40}{\meter}}{\SI{3,00}{\meter}}\right)\right) \cdot \SI{e-5}{\meter}}{2} = \SI{6,61e-7}{\meter} = \SI{661}{\nm}
+		\end{split}
+	\end{equation}
+	
+	\paragraph{b)} Wie viele Stellen maximaler Helligkeit könnte man bei dieser Beugung insgesamt höchstens beobachten?
+	
+	\begin{equation}
+		\begin{split}
+			\sin\left(\alpha_k\right)=\frac{k \cdot \lambda}{g} &< 1 \\
+			\Leftrightarrow k &< \frac{g}{\lambda} \\
+			\Leftrightarrow k &< \frac{\SI{e-5}{\meter}}{\SI{6,61e-7}{\meter}} = 15,1
+		\end{split}
+	\end{equation}
+	
+	$k \in \mathbb{N} \Rightarrow k_{\text{max}} = 15$
+	
+	Maxima bis zur 15. Ordnung, also 30 Stellen maximaler Helligkeit.
 	
 	\section{Quanten und Atome}
 
