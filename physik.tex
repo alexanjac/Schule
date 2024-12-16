@@ -281,7 +281,20 @@
 	
 	$k \in \mathbb{N} \Rightarrow k_{\text{max}} = 15$
 	
-	Maxima bis zur 15. Ordnung, also 30 Stellen maximaler Helligkeit.
+	Maxima bis zur 15. Ordnung, also 31 Stellen maximaler Helligkeit.
+	
+	\subsubsection{Beugungsordnung}
+	Stelle fest, welche Beugungsordnung mit unserem Gitter ($g^{-1} = \SI[per-mode=reciprocal]{300}{\per\meter}$) bei rotem Laserlicht ($\lambda = \SI{635}{\nm}$) maximal beobachtbar ist.
+	
+	\begin{equation}
+	\begin{split}
+		\sin\left(\alpha_k\right)=\frac{k \cdot \lambda}{g} &< 1 \\
+		\Leftrightarrow k &< \frac{g}{\lambda} \\
+		\Leftrightarrow k &< \frac{\SI{3,33e-6}{\meter}}{\SI{635}{\nm}} = 5,24
+	\end{split}
+	\end{equation}
+	
+	$k \in \mathbb{N} \Rightarrow k_{\text{max}} = 5$
 	
 	\section{Quanten und Atome}
 
