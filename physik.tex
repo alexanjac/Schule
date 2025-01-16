@@ -275,7 +275,7 @@
 		\begin{split}
 			\sin\left(\alpha_k\right)=\frac{k \cdot \lambda}{g} &< 1 \\
 			\Leftrightarrow k &< \frac{g}{\lambda} \\
-			\Leftrightarrow k &< \frac{\SI{e-5}{\meter}}{\SI{6,61e-7}{\meter}} = 15,1
+			\Leftrightarrow k &< \frac{\SI{e-5}{\meter}}{\SI{661e-9}{\meter}} = 15,1
 		\end{split}
 	\end{equation}
 	
@@ -290,12 +290,74 @@
 	\begin{split}
 		\sin\left(\alpha_k\right)=\frac{k \cdot \lambda}{g} &< 1 \\
 		\Leftrightarrow k &< \frac{g}{\lambda} \\
-		\Leftrightarrow k &< \frac{\SI{3,33e-6}{\meter}}{\SI{635}{\nm}} = 5,24
+		\Leftrightarrow k &< \frac{\SI{3,33e-6}{\meter}}{\SI{635e-9}{\m}} = 5,24
 	\end{split}
 	\end{equation}
 	
 	$k \in \mathbb{N} \Rightarrow k_{\text{max}} = 5$
 	
 	\section{Quanten und Atome}
+	
+	\subsection{Photoeffekt}
+	
+	\subsubsection{Halbierung}
+	Beim Photoeffekt wird die Frequenz des einfallenden Lichtes halbiert. Verringert sich die kinetische Energie der Photoelektronen ebenfalls, auf den halben Wert, oder auf mehr oder weniger als den halben Wert? (mit Begründung)
+	
+	\begin{equation}
+		\begin{split}
+			W_\text{A} + E_\text{kin} &= h \cdot f \\
+			E_\text{kin} &= h \cdot f - W_\text{A}
+		\end{split}
+	\end{equation}
+	
+	$\Rightarrow \frac{1}{2}E_\text{kin} = \frac{hf}{2} - \frac{W_\text{A}}{2}$
+	
+	\begin{equation}
+		\begin{split}
+			E'_\text{kin} &= h \cdot \frac{f}{2} - W_\text{A} \\
+						  &= \frac{hf}{2} - W_\text{A}
+		\end{split}
+	\end{equation}
+	
+	
+	
+	Bei konstantem $W_\text{A}$ ist $E'_\text{kin} < \frac{1}{2}E_\text{kin}$.
+	
+	\subsubsection{Austrittsarbeit}
+	Berechne für die Austrittsarbeit $W_\text{A} = \SI{0,8}{\eV}$ die Grenzfrequenz und die Grenzwellenlänge für das Auftreten von Photoelektronen! Welchem Spektralbereich gehört diese Frequenz an?
+	
+	$\SI{0,8}{\eV} = \SI{1,28e-19}{\J}$
+	
+	\begin{equation}
+		\begin{split}
+			W_\text{kin} &= hf - W_\text{A} \\
+			0 &= \SI{6,63e-34}{\J\s} \cdot f - \SI{1,28e-19}{\J} \\
+			f &= \frac{\SI{1,28e-19}{\J}}{\SI{6,63e-34}{\J\s}} = \SI{1,93e14}{\per\s}
+		\end{split}
+	\end{equation}
+	\begin{equation}
+		\lambda = \frac{c}{f} = \frac{\SI{3,00e8}{\m\per\s}}{\SI{1,93e14}{\Hz}} = \SI{1550}{\nm} \Rightarrow \text{Infrarotbereich}
+	\end{equation}
+	
+	\subsubsection{Kinetische Energie}
+	Welche kinetische Energie (in eV) erhält ein Photoelektron, das von Licht der Wellenlänge $\SI{400}{\nm}$ aus einem Metall mit $\SI{0.8}{\eV}$ ausgelöst wird? Berechne seine Geschwindigkeit!
+	
+	\begin{equation}
+		\begin{split}
+			E_\text{kin} &= hf - W_\text{A} \\
+			&= \SI{4,14e-15}{\eV\s} \cdot \frac{\SI{3,00e8}{\m\per\s}}{\SI{400e-9}{\m}} - \SI{0,8}{\eV} \\
+			&= \SI{2,31}{\eV} = \SI{3,70e-19}{\J}
+		\end{split}
+	\end{equation}
+	
+	\begin{equation}
+		\begin{split}
+			E_\text{kin} &= \frac{1}{2} m_\text{e}v^2 \\
+			v &= \sqrt{\frac{2E_\text{kin}}{m_\text{e}}} \\
+			  &= \sqrt{\frac{2 \cdot \SI{3,70e-19}{\J}}{\SI{9,11e-31}{\kg}}} \\
+			  &= \SI{9,01e5}{\m\per\s}
+		\end{split}
+	\end{equation}
+
 
 \end{document}
