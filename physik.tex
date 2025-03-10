@@ -1,6 +1,7 @@
 \documentclass{ajc}
 \usepackage[output-decimal-marker={,},per-mode=fraction,fraction-function=\tfrac]{siunitx}
 \pdfsuppresswarningpagegroup=1
+\usetikzlibrary{arrows, decorations.pathmorphing}
 
 
 \title{Physik}
@@ -410,6 +411,96 @@
 	\begin{equation}
 		\lambda_\text{e100} = \frac{h}{\sqrt{\SI{200}{eV} \cdot m_\text{e}}} = \SI{0,123}{\nm}
 	\end{equation}
+	
+	\newpage
 
+	\subsection{Aufgaben zu Serienformeln}
+	Die Funktionsweise des Rubinlasers basiert auf den in \ref{fig:rublas} dargestellten Energiezuständen der im Rubinkristall enthaltenen Cr$^{\text{3+}}$-Ionen. Durch Wechselwirkung mit den von der Blitzlampe gelieferten Photonen werden die Ionen aus ihrem Energiezustand $\text{W}_1$ auf die Energieniveaus $\text{W}_3$ bzw. $\text{W}_4$ angehoben, von wo aus sie auf das Niveau $\text{W}_2$ wechseln. Bei der Rückkehr vom Niveau $\text{W}_2$ in den Grundzustand $\text{W}_1$ wird rotes Laserlicht emittiert.
+	
+	\begin{figure}[ht]
+		\centering
+		\begin{tikzpicture}[decoration = {snake,   % <-- added
+				pre length=2pt,post length=4pt}]
+			% Rahmen 
+			\draw[thick,->] (0,0) -- (0,4);
+			
+			\draw[thick] (-.1,0) -- (.1,0);
+			\draw[thick,dotted] (.1,0) -- (.5,0);
+			\draw[thick] (.5,0) -- (6,0);
+			
+			% Inhalt
+			\draw[thick] (-.1,1.79) -- (.1,1.79);
+			\draw[thick,dotted] (.1,1.79) -- (3,1.79);
+			\draw[thick] (3,1.79) -- (6,1.79);
+			
+			\draw[thick] (-.1,2.22) -- (.1,2.22);
+			\draw[thick,dotted] (.1,2.22) -- (.5,2.22);
+			\draw[thick] (.5,2.22) -- (2.75,2.22);
+			
+			\draw[thick] (-.1,3.03) -- (.1,3.03);
+			\draw[thick,dotted] (.1,3.03) -- (.5,3.03);
+			\draw[thick] (.5,3.03) -- (2.75,3.03);
+			
+			% Gerade Pfeile
+			\draw[thick,->] (1.5,0) -- (1.5,3.03);
+			\draw[thick,->] (2.25,0) -- (2.25,2.22);
+			\draw[thick,->] (5,1.79) -- (5,0);
+			
+			% Wellenpfeile
+			\draw[thick,decorate,->] (.25,.645) -- (2.25,.645);
+			\draw[thick,decorate,->] (.25,.945) -- (1.5,.945);
+			
+			\draw[thick,decorate,->] (1.65,2.93) -- (5,1.79);
+			\draw[thick,decorate,->] (2.4,2.12) -- (3.36973684211,1.79);
+			
+			\draw[thick,decorate,->] (5,.795) -- (7,.795);
+			
+			% Text
+			\draw (-.247,0) node[font=\tiny] {0};
+			\draw (-.4,1.79) node[font=\tiny] {1.79};
+			\draw (-.4,2.22) node[font=\tiny] {2.22};
+			\draw (-.4,3.03) node[font=\tiny] {3.03};
+			
+			\draw (0,4.2) node[font=\tiny] {$W$ in \SI{}{\eV}};
+			\draw (5,2.625) node[font=\tiny] {Energieabgabe an Kristall};
+			\draw (.8,1.2) node[font=\tiny] {Absorption};
+			\draw (6,1) node[font=\tiny] {Emission};
+			
+			\draw (.65,.15) node[font=\tiny] {$W_1$};
+			\draw (5.8,1.94) node[font=\tiny] {$W_1$};
+			\draw (.65,2.37) node[font=\tiny] {$W_3$};
+			\draw (.65,3.18) node[font=\tiny] {$W_4$};
+						
+		\end{tikzpicture}
+		\caption{Rubinlaser}
+		\label{fig:rublas}
+	\end{figure}
+		
+	\paragraph{Bestätigen} Sie anhand von \ref{fig:rublas}, dass die Energiedifferenz zwischen $W_1$ und $W_2$ den Betrag \SI{2,86e-19}{\J} hat.
+		
+	\begin{equation}
+		\Delta W = W_2 -W_1 = \SI{1.79}{\eV} - \SI{0}{\eV} = \SI{1.79}{\eV}
+	\end{equation}
+		
+	\begin{equation}
+		\SI{1.79}{\eV} \cdot \SI{1.60e-19}{\J\per\eV} = \SI{2,86e-19}{\J} \qed
+	\end{equation}
+
+	\paragraph{Berechnen} Sie die Wellenlänge des emittierten Laserlichts.
+	
+	\begin{equation}
+		\begin{split}
+			h \cdot f &= W_2 -W_1 \\
+			\Leftrightarrow f &= \frac{W_2 -W_1}{h} \\
+			&= \frac{\SI{2,86e-19}{\J}}{h} \\
+			&= \SI{4,32e14}{\s}
+		\end{split}
+	\end{equation}
+	
+	\begin{equation}
+		\lambda = \frac{c}{f} = \frac{c}{\SI{4,32e14}{\s}} = \SI{695}{\nm}
+	\end{equation}
+	
+	
 
 \end{document}
